@@ -1,16 +1,27 @@
 package cuccovillo.alessio.beanval.model;
 
-import lombok.Data;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.io.Serializable;
 import java.time.LocalDate;
 
-@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public abstract class GenericField implements Serializable {
     static final long serialVersionUID = 1L;
-    private LocalDate start;
-    private LocalDate end;
-    private String value;
+    @Getter
+    @Setter
+    protected LocalDate start;
+    @Getter
+    @Setter
+    protected LocalDate end;
+    @Setter
+    protected String value;
+
+    public abstract String getValue();
 
     public abstract String getFieldName();
 

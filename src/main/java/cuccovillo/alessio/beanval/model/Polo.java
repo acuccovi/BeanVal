@@ -1,22 +1,22 @@
 package cuccovillo.alessio.beanval.model;
 
-import org.hibernate.validator.constraints.Length;
+import cuccovillo.alessio.beanval.validator.Mdt;
 
-public class Proter extends GenericField {
-    public static final String FIELD_NAME = "PROTER";
+public class Polo extends GenericField {
+    public static final String FIELD_NAME = "POLO";
 
     @Override
     public String getFieldName() {
-        return "PROTER";
+        return FIELD_NAME;
     }
 
     @Override
     public String getSapName() {
-        return "APROTER";
+        return "APOLO";
     }
 
     @Override
-    @Length(max = 80)
+    @Mdt(name = "APOLO")
     public String getValue() {
         return value;
     }
